@@ -12,22 +12,13 @@ body {
     text-align: center;
 }
 
-.button {
-    background-color: brgb(23, 23, 109);
+.button  {
+    background-color: rgb(23, 23, 109);
     color: white;
 }
 
-/* h1 {
-    text-align: center;
+h3 {
+    background-color: rgb(23, 23, 109);
     color: white;
-    background-color: blue;
-    padding: 40px;
-    margin-top: 45px;
-    font-size: 60px;
-
+    
 }
-
-h2 {
-    color: white;
-    background-color: blue;
-} */
