@@ -1,0 +1,33 @@
+body {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: rgb(23, 23, 109);
+    color: white;
+    text-align: center;
+}
+
+.button {
+    background-color: brgb(23, 23, 109);
+    color: white;
+}
+
+/* h1 {
+    text-align: center;
+    color: white;
+    background-color: blue;
+    padding: 40px;
+    margin-top: 45px;
+    font-size: 60px;
+
+}
+
+h2 {
+    color: white;
+    background-color: blue;
+} */
