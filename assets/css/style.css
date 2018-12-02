@@ -12,9 +12,14 @@ body {
     text-align: center;
 }
 
+#trainTable{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .button  {
     background-color: rgb(23, 23, 109);
     color: white;
+    margin-top: 10px;
 }
 
 h3 {

@@ -9,15 +9,20 @@
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <!-- Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <!-- Moment.js Script -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- link to my css style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Tiffany's Train Scheduler</title>
+
 
 </head>
 
 <body>
     <div class="container-fluid">
+        <!-- Jumbotron -->
         <div class="row">
             <div class="col-md-2"></div>
             <div class="jumbotron col-md-8">
@@ -27,10 +32,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- Current Trains -->
+
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 border border-secondary rounded p-2">
-                <table class="table">
+                <table id="trainTable">
                     <thead>
                         <h3>Current Train Schedule</h3>
                         <tr>
@@ -39,40 +47,45 @@
                             <th scope="col">Frequency (min)</th>
                             <th scope="col">Next Arrival</th>
                             <th scope="col">Minutes Away</th>
-                            </th>
                         </tr>
                     </thead>
+                    <tbody>
+                    </tbody>
                 </table>
-                <form class="border border-secondary rounded p-3">
-                    <div class="form-group">
-                        <h3>Add Train</h3>
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="trainName" placeholder="Name of Train">
-                    </div>
-                    <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input type="text" class="form-control" id="destination" placeholder="Destination">
-                    </div>
-                    <div class="form-group">
-                        <label for="firstTrain">First Train Time (HH:mm AM/PM)</label>
-                        <input type="time" class="form-control" id="firstTrain" placeholder="HH:mm">
-                    </div>
-                    <div class="form-group">
-                        <label for="frequency">Frequency (min)</label>
-                        <input type="number" class="form-control" id="frequency" placeholder="15">
-                    </div>
-                    <button type="submit" class="button">Submit</button>
-                </form>
             </div>
         </div>
+
+        <!-- Add Trains -->
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <form class="col-md-8 border border-secondary rounded p-2">
+                <div class="formGroup">
+                    <h3>Add Train</h3>
+                    <label for="trainName">Train Name</label>
+                    <input type="text" class="form-control" id="trainName" placeholder="Name of Train">
+                </div>
+                <div class="formGroup">
+                    <label for="destination">Destination</label>
+                    <input type="text" class="form-control" id="destination" placeholder="Destination">
+                </div>
+                <div class="formGroup">
+                    <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="firstTrain" placeholder="18:00">
+                </div>
+                <div class="formGroup">
+                    <label for="frequency">Frequency (min)</label>
+                    <input type="number" class="form-control" id="frequency" placeholder="10">
+                </div>
+                <button type="submit" class="button" id="addTrain">Submit</button>
+            </form>
+        </div>
+
     </div>
-    
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/train.js"></script>
 </body>
 
 </html>
-
-
-<!-- How do i define "Current Train Schedule" box
-and "Add Train" box
