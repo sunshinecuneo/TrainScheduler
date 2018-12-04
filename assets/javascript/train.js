@@ -62,7 +62,7 @@ var firstTrain = childSnapshot.val().firstTrain
 var frequency = childSnapshot.val().frequency;
 
 // Other variables
-var frequency = 0;
+// var frequency = 0;
 
 // Entry on the entry form
 var firstTrain = 0;
@@ -89,10 +89,10 @@ console.log("Minutes Till Train: " + tMinutesTillTrain);
 
 // Next Train
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-console.log("Arrival Time: " + moment(nextTrain).format("hh:mm"));
+console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
 
 
-// Creat the new row on the html with new train data
+// Creat the new row on the html table with new train data
 $("#trainTable > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + tMinutesTillTrain + "</td></tr>");
 
 //Handle any errors
@@ -100,7 +100,3 @@ $("#trainTable > tbody").append("<tr><td>" + trainName + "</td><td>" + destinati
     console.log("Errors handled: " + errorObject.code);
 
 });
-
-// "Minutes till trian" shows NaN
-// "First Train" is not showing up in database
-
