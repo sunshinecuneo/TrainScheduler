@@ -13,10 +13,14 @@ body {
 }
 
 #trainTable {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+    
+#addTable {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%;
-    
 }
 
 thead th {
